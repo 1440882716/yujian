@@ -1,0 +1,279 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+/* 这是做适配的 */
+.nav_bigbox{
+	width: 100%;
+	height: 200px;
+	background-color: rgb(48,48,48);
+}
+.nav123{
+	width: 1200px;
+	height: 200px;
+	margin: 0 auto;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	color: rgb(255,157,0);
+}
+.nav1{
+	width: 100%;
+	height: 30px;
+	background-color: rgb(43,43,43);
+	color: white;
+	position: relative;
+}
+.nav1 span a{
+	color: #999;
+	margin-left: 10px;
+	text-decoration: none;
+}
+.nav1 span a:hover{
+	color: rgb(255,157,0);
+}
+.nav1_left{
+	display: inline-block;
+	position: absolute;
+	top: 3px;
+	left: 155px;
+}
+.nav1_right{
+	display: inline-block;
+	position: absolute;
+	top: 3px;
+	right: 300px;
+}
+.nav2{
+	width: 100%;
+	height: 120px;
+	position: relative;
+	background-color: rgb(51,51,51);
+}
+#plist{
+	display: none;
+	height: 160px;
+	position: absolute;
+	right: 790px;
+	top: 75px;
+	z-index: 999;
+	background-color: white;
+}
+#plist ul{
+	margin-top: 0px;
+	margin-left: 13px;
+}
+#plist li{
+	color: #999;
+	width: 55px;
+	height: 20px;
+	display: block;
+}
+.nav2 .server{
+	width: 100px;
+	height: 80px;
+	/* background-color: lavenderblush; */
+	position: absolute;
+	right: 100px;
+	top: 40px;
+}
+.nav2 .server .p1{
+	color: #999;
+	
+}
+.nav .server .p2{
+	color: rgb(253,208,0);
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+	background-color: lavenderblush;
+}
+.box_log{
+	width: 198px;
+	height: 75px;
+	position: absolute;
+	margin-top: 20px;
+	display: inline-block;
+	background-color: lavender;
+}
+.box_log img{
+	width: 198px;
+	height: 75px;
+}
+.option p a{
+	text-decoration: none;
+	color: rgb(253,208,0);
+}
+.option p{
+	color: rgb(253,208,0);
+	font-size: 18px;
+	position: absolute;
+	right: 800px;
+	top: 48px;
+}
+.triangle{
+	color: white;
+}
+.box_inp{
+	position: absolute;
+	right: 350px;
+	top: 40px;
+}
+input{
+	width: 432px;
+	height: 40px;
+	background-color: rgb(51,51,51);
+	border: 2px solid rgb(253,208,0);
+	color: white;
+	padding-left: 5px;
+	box-sizing: border-box;
+}
+.btn{
+	width: 130px;
+	height: 40px;
+	border: 0px;
+	position: absolute;
+	right: 222px;
+	top: 40px;
+	background-color: rgb(253,208,0);
+}
+.inp{
+	width: 435px;
+	height: 40px;
+	display: inline-block;
+	
+}
+.nav3{
+	width: 100%;
+	height: 50px;
+	position: relative;
+	background-color: rgb(31,31,31);
+}
+.a_right_top_ul{
+	display: flex;
+	list-style-type: none;
+}
+.a_right_top_ul li{
+	color: white;
+	
+	width: 100px;
+	height: 50px;
+	text-align: center;
+	/* display: inline; */
+	/* margin-left: 20px; */
+	line-height: 50px;
+}
+#nav3_list{
+	height: 50px;
+}
+#nav3_list a{
+	text-decoration: none;
+	color: rgb(255,255,255);
+}
+#nav3_list a:hover{
+	color: rgb(255,157,0);
+}
+.nav3 #nav3_list .list{
+	display: flex;
+	height: 50px;
+	line-height: 50px;
+	justify-content: space-between;
+	list-style: none;
+	text-align: center;
+	/* margin-top: 20px; */
+	/* margin-left: 100px !important; */
+}
+/* 中间部分 */
+.goodsbox{
+	width: 100%;
+}
+.goodsinfo{
+	width: 1200px;
+	margin: 0 auto;
+	/* background-color: lavender; */
+}
+.onebox{
+	width: 100%;
+	/* background-color: darkcyan; */
+	margin-top: 15px;
+}
+.oneleft{
+	width: 502px;
+	float: left;
+}
+.oneleft_t{
+	width: 502px;
+	height: 340px;
+}
+.img{
+	width: 502px;
+	height: 280px;
+	/* background-color: oldlace; */
+}
+.img_item{
+	width: 502px;
+	height: 53px;
+	/* background-color: palegreen; */
+	display: flex;
+	justify-content: space-between;
+	margin-top: 7px;
+}
+.img_item div{
+	width: 94px;
+	height: 53px;
+}
+.oneleft_f p{
+	margin-top: 10px;
+}
+.img_item div img{
+	width: 100%;
+	height: 100%;
+}
+.twobox{
+	width: 100%;
+	height: 48px;
+	/* background-color: palevioletred; */
+}
+/* 底部导航栏 */
+.footer {
+	width: 100%;
+    height: auto;
+	background-color: #3c3c3c;
+	padding: 80px 0px;
+
+}
+.footer .container {
+	position: relative;
+	width: 1200px;
+	margin: 0 auto;
+}
+.footer a {
+	color: #b0b0b0;
+	margin: 0 3px;
+}
+.footer a:hover {
+	color: #fff;
+}
+.footer p {
+	font-size: 14px;
+	color: #b0b0b0;
+	margin-top: 12px;
+}
+.footer span {
+	font-size: 12px;
+	color: #b0b0b0;
+}
+.footer span::after {
+	content: "|";
+    margin-left: 7px;
+}
+.footer div img {
+	width: 130px;
+	height: 130px;
+	position: absolute;
+	top: 0px;
+	right: 60px;
+	border-radius: 50%;
+}

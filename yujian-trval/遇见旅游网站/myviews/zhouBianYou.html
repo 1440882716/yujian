@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap.css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="/css/zhoubianyou.css" />
+		<title>遇见-和你的不期而遇</title>
+	</head>
+
+	<body>
+		<!-- 头部开始 -->
+		<div class="nav_bigbox">
+			<div class="nav123">
+				<!-- 登陆注册条 -->
+				<div class="nav1">
+					<div class="nav1_left">
+						<%if(result0=="get"){%>
+							<span style="color: #999;" class="second">欢迎您 </span><span style="color: #999;" class="first"><%= result%></span>
+							<span><a class='regist' href="/page1/regist">注册账号</a></span>
+						<%}%>
+						<% if(result0==""){ %>
+							<span class="first"><a class='login' href="/page1/login">登录</a></span>
+							<span><a class='regist' href="/page1/regist">注册账号</a></span>
+						<%}%>
+					</div>
+					<div class="nav1_right">
+						<span><a href="#">帮助中心</a></span>
+						<span><a href="#">遇见旅途</a></span>
+						<span><a href="#">手机APP</a></span>
+					</div>
+				</div>
+
+				<div class="nav2">
+					<div class="container">
+						<div class="box_log">
+							<a href="/first"><img src="/img/logo.jpg"></a>
+						</div>
+						<!-- 坐标下拉菜单 -->
+						<div class="option">
+							<p id="choose">
+								<a href="#">成都站</a>
+								<div id="plist">
+									<ul>
+										<li>上海站</li>
+										<li>杭州站</li>
+										<li>广州站</li>
+										<li>武汉站</li>
+										<li>深圳站</li>
+										<li>厦门站</li>
+										<li>重庆站</li>
+									</ul>
+								</div>
+
+							</p>
+						</div>
+
+						<form action="/page1/search" method="get">
+							<div class="box_inp">
+								<input type="text" name="place" placeholder="成都" value="" />
+							</div>
+							<button class="btn" type="submit">搜索</button>
+						</form>
+
+						<div class="server">
+							<p class="p1">服务热线</p>
+							<p class="p1">9:00-21:00->400-670-6300</p>
+							<p class="p2">400-670-6300</p>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="nav3">
+					<div id="nav3_list">
+						<ul class="list">
+							<li>
+								<a href="/first">首页</a>
+							</li>
+							<li>
+								<a href="#" style="color: yellow;">周边游</a>
+							</li>
+							<li>
+								<a href="#">当地玩乐</a>
+							</li>
+							<li>
+								<a href="#">国内游</a>
+							</li>
+							<li>
+								<a href="#">出境游</a>
+							</li>
+							<li>
+								<a href="#">出境游</a>
+							</li>
+							<li>
+								<a href="#">摄影游</a>
+							</li>
+							<li>
+								<a href="#">亲子游</a>
+							</li>
+							<li>
+								<a href="#">活动赛事</a>
+							</li>
+							<li>
+								<a href="#">主题游</a>
+							</li>
+							<li>
+								<a href="#">定制游</a>
+							</li>
+							<li>
+								<a href="#">民宿营地</a>
+							</li>
+							<li>
+								<a href="#">社区</a>
+							</li>
+							<li>
+								<a href="#">个人中心</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 这是做适配的盒子 -->
+			</div>
+		</div>
+		<!-- 头部结束 -->
+
+		<!-- 中间部分开始 -->
+		<div class="bigbox">
+			<!-- 做居中的盒子 -->
+			<div class="center_box">
+				<!-- 中间第一部分 -->
+				<div class="header">
+					<div class="title">
+						周边游
+					</div>
+					<div class="select">
+						<a href="#">成都出发<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a>
+						<ul class="s_list">
+							<li class="select_li">
+								<a href="#">杭州出发</a>
+							</li>
+							<li class="select_li">
+								<a href="#">上海出发</a>
+							</li>
+							<li class="select_li">
+								<a href="#">广州出发</a>
+							</li>
+							<li class="select_li">
+								<a href="#">成都出发</a>
+							</li>
+							<li class="select_li">
+								<a href="#">北京出发</a>
+							</li>
+							<li class="select_li">
+								<a href="#">苏州出发</a>
+							</li>
+							<li class="select_li">
+								<a href="#">武汉出发</a>
+							</li>
+							<li class="select_li">
+								<a href="#">南京出发</a>
+							</li>
+						</ul>
+					</div>
+					<div class="img">
+						<img src="/img/city.png" alt="">
+					</div>
+				</div>
+				<div class="banner">
+					<div class="banner_left">
+						<p>热门目的地</p>
+						<table class="table">
+							<tr>
+								<td>序号</td>
+								<td>地点</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>
+									<%= result1[0].place%>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>
+									<%= result1[1].place%>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>
+									<%= result1[2].place%>
+								</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>
+									<%= result1[3].place%>
+								</td>
+							</tr>
+						</table>
+						<p>小众目的地</p>
+						<table class="table">
+							<tr>
+								<td>序号</td>
+								<td>地点</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>
+									<%= result2[0].place%>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>
+									<%= result2[2].place%>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!-- 中间右边轮播 -->
+					<div class="banner_right">
+						<!-- lunbo -->
+						<div class="swiper">
+							<!-- 轮播图 -->
+							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+								<!-- Indicators -->
+								<ol class="carousel-indicators">
+									<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+									<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+									<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+									<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+									<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+									<li data-target="#carousel-example-generic" data-slide-to="5"></li>
+								</ol>
+
+								<!-- Wrapper for slides -->
+								<div class="carousel-inner" role="listbox">
+									<!-- one -->
+									<div class="item active">
+										<img src="/img/zbyLB1.jpg">
+									</div>
+									<!-- two -->
+									<div class="item">
+										<img src="/img/zbyLB2.jpg">
+									</div>
+									<!-- three -->
+									<div class="item">
+										<img src="/img/zbyLB3.jpg">
+									</div>
+									<!-- four -->
+									<div class="item">
+										<img src="/img/zbyLB4.jpg">
+									</div>
+									<!-- five -->
+									<div class="item">
+										<img src="/img/zbyLB5.jpg">
+									</div>
+									<!-- six -->
+									<div class="item">
+										<img src="/img/zbyLB6.jpg">
+									</div>
+								</div>
+
+								<!-- Controls -->
+								<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+
+								<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+
+							</div>
+						</div>
+
+					</div>
+					<!-- 中间第一部分结束 -->
+				</div>
+				<!-- 中间第二部分 -->
+				<div class="hotroot">
+					<div class="hotroot_head">
+						<ul>
+							<li>
+								<a href="#" style="color: rgb(255,157,0);">热门路线</a>
+							</li>
+							<li>
+								<a href="#">新品推荐</a>
+							</li>
+						</ul>
+					</div>
+					<div class="root">
+						<div class="root0 root1">
+							<a href="#"><img src="/img/hot1.jpg" alt=""></a>
+							<div class="round">
+								【轻装·武功山】2019年全年计划，轻装徒步户外圣地，邂逅绝美武功山，2日/3日行程可选（2人成行，每天发团）
+							</div>
+						</div>
+						<div class="root0 root2">
+							<a href="#"><img src="/img/hot2.jpg" alt=""></a>
+							<div class="round">
+								【徽杭古道】2019全年计划，重返徽商之路，轻装徒步徽杭古道，周末天天发团（古道传奇系列，颁发古道纪念证书）
+							</div>
+						</div>
+						<div class="root0 root3">
+							<a href="#"><img src="/img/hot3.jpg" alt=""></a>
+							<div class="round">
+								【冬行·莫干山】2018-19冬季，天山暮雪，浙江小庐山，游侠重走蒋公道，行走森林氧吧，莫干山古道徒步（2人成行）（支持自驾游，目的地集合）
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 中间第三部分 -->
+				<div class="days">
+					<!-- 上面 -->
+					<div class="hotroot_head">
+						<ul>
+							<li>
+								<a href="#" style="color: black; font-size: 18px;"><b>出游天数</b></a>
+							</li>
+							<li style="color: #999; font-size: 16px;">时间就是正义</li>
+						</ul>
+						<div class="smallday">
+							<ul>
+								<li>
+									<a href="#">一日</a>
+								</li>
+								<li>
+									<a href="#">两日</a>
+								</li>
+								<li>
+									<a href="#">三日</a>
+								</li>
+								<li>
+									<a href="#">三日以上</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 中间 -->
+					<div class="body1">
+						<div class="body1_left">
+							<img title="【冰雪龙王山】1-2月，天山暮雪，天目七尖二部曲，豪情万丈独闯天目七尖最高峰—龙王山，山巅云海踏雪行！（冰雪七尖系列）" src="../img/day1.jpg">
+						</div>
+						<div class="body1_mid">
+							<img title="【征途·高骊山】1-4月，穿越丛林、舞动山脊，尽享高骊山峭壁间的徒步乐趣（单日徒步）金猪贺岁" src="/img/day2.jpg">
+							<p style="font-size: 15px;"> 【征途·高骊山】1-4月，穿越丛林、舞动山脊，尽享高骊山峭壁间的徒步乐趣（单日徒步）金猪贺岁</p>
+							<p class="price">165/人起</p>
+							<a class="join" href="#">赶紧报名吧！</a>
+						</div>
+						<div class="body1_right body1_mid">
+							<img title="【孙家岭古道】1月，徒步孙家岭古道-五百岗，登顶雄鹅峰，疾行秋色大尖山，探浙江腹地的高山草甸（金猪贺岁）" src="/img/day3.jpg">
+							<p style="font-size: 15px;"> 【孙家岭古道】1月，徒步孙家岭古道-五百岗，登顶雄鹅峰，疾行秋色大尖山，探浙江腹地的高山草甸（金猪贺岁）</p>
+							<p class="price">145/人起</p>
+							<a class="join" href="#">赶紧报名吧！</a>
+						</div>
+					</div>
+					<!-- 底部 -->
+					<div class="foot">
+						<div class="body1_mid">
+							<img title=" 【古道·莫干山】1月，游侠重走蒋公道，莫干山古道，观竹溪秘道、剑池飞瀑（单日徒步，金猪贺岁，2019全年计划）" src="/img/day4.jpg">
+							<p style="font-size: 15px;"> 【古道·莫干山】1月，游侠重走蒋公道，莫干山古道，观竹溪秘道、剑池飞瀑（单日徒步，金猪贺岁，2019全年计划）</p>
+							<p class="price">185/人起</p>
+							<a class="join" href="#">赶紧报名吧！</a>
+						</div>
+						<div class="body1_right body1_mid">
+							<img title="【山水相逢·王位山】1月，溪水潺潺，竹海听风，登顶王位山，看群峦起伏（单日徒步，金猪贺岁，2019全年计划）" src="/img/day5.jpg">
+							<p style="font-size: 15px;"> 【山水相逢·王位山】1月，溪水潺潺，竹海听风，登顶王位山，看群峦起伏（单日徒步，金猪贺岁，2019全年计划）</p>
+							<p class="price">125/人起</p>
+							<a class="join" href="#">赶紧报名吧！</a>
+						</div>
+						<div class="body1_right body1_mid">
+							<img title=" 【高空跳伞】2018浙江建德，双人跳伞一生一次的难忘旅行，换一个角度看自己生活世界，从高空跳入大地怀抱！" src="/img/day6.jpg">
+							<p style="font-size: 15px;"> 【高空跳伞】2018浙江建德，双人跳伞一生一次的难忘旅行，换一个角度看自己生活世界，从高空跳入大地怀抱！</p>
+							<p class="price">225/人起</p>
+							<a class="join" href="#">赶紧报名吧！</a>
+						</div>
+						<div>
+							<div class="beautiful">
+								<a href="#"><img src="/img/beautiful.jpg"></a>
+								<div class="hate">
+									
+								</div>
+								<a href="#"><p class="hatep">更多精彩</p></a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- 热门攻略 -->
+				<div class="remen">
+					<div class="hotroot_head">
+						<ul>
+							<li>
+								<a href="#" style="color: black; font-size: 18px;"><b>热门攻略</b></a>
+							</li>
+							<li style="color: #999; font-size: 16px;">精彩纷呈 不容错过</li>
+						</ul>
+					</div>
+					<div class="show">
+						<div class="show1">
+							<a href="#"><img src="/img/show1.jpg"></a>
+							<p>浪漫的小众私人海岛</p>
+						</div>
+						<div class="show1">
+							<a href="#"><img src="/img/show2.jpg"></a>
+							<p>想玩胶片摄影，应该知道这些！</p>
+						</div>
+						<div class="show1">
+							<a href="#"><img src="/img/show3.jpg"></a>
+							<p>上海买糕点去哪？</p>
+						</div>
+						<div class="show1">
+							<a href="#"><img src="/img/show4.jpg"></a>
+							<p>第一次去迪士尼乐园怎么玩？</p>
+						</div>
+						<style type="text/css">
+						</style>
+					</div>
+					
+					<!--<script type="text/javascript">
+						var show1 = document.querySelectorAll(".show1");
+						for(var i = 0; i < show1.length; i ++){
+							show1[i].onmouseenter=function(e){
+								console.log(e)
+							}
+						}
+					</script>-->
+				</div>
+
+				<!-- 做居中的盒子 -->
+			</div>
+		</div>
+		<!-- 中间部分结束 -->
+		<!-- 终于到最底部啦   好开心 -->
+
+		<div class="bottom">
+			<div class="bottom_box">
+				<div class="footer2">
+					<!-- 中间线条 -->
+					<div class="line"></div>
+					<!-- 文字 -->
+					<div class="f2_m_text">
+						<ul>
+							<li>关于遇见</li>
+							<li>遇见的故事</li>
+							<li>联系遇见</li>
+							<li>遇见招聘</li>
+							<li>意见反馈</li>
+							<li>使用协议</li>
+							<li>隐私政策</li>
+							<li>交换链接</li>
+							<li>帮助中心</li>
+							<li>网站地图</li>
+						</ul>
+						<p class="text1">浙ICP备 09011712 号-1 浙公网安备 33010602002105号 营业执照 浙江游侠客国际旅行社有限公司 杭州途游电子商务有限公司 许可证编号：L-ZJ-CJ00161</p>
+						<p class="text2">© 2019 youxiake.com 版权所有法律顾问：浙江四海方圆律师事务所 傅林放 杭州市旅游投诉电话：0571-96123 投诉及紧急事件联系电话：400-670-6300转5 旅游预订电话(免长途费)：400-670-6300，公司总部地址：浙江省杭州市西湖区教工路198号浙商大创业园D幢3楼，投诉建议邮箱：jianyi@youxiake.com
+						</p>
+					</div>
+
+					<!-- 中间线条 -->
+					<div class="line"></div>
+
+					<!-- text.img -->
+					<div class="f2_text">
+						<img src="/img/text.png">
+						<img src="/img/foot.jpg">
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- 引入的框架 -->
+		<script src="/js/jquery.js/jquery.js"></script>
+		<script src="/js/bootstrap.js/bootstrap.min.js"></script>
+		<!--<script src="/js/zhoubianyou.js"></script>-->
+		<script type="text/javascript">
+			$('.carousel').carousel({
+				interval: 1500
+			})
+			//盒子特效的
+				$(".beautiful").mouseenter(function(){
+					$('.hate').css({"transform":"scale(3,3)","transition":"transform 2s"})
+					$('.hatep').fadeIn();
+				})
+				$(".beautiful").mouseleave(function(){
+					$('.hate').css({"transform":"scale(1,1)","transition":"transform 1s"})
+					$('.hatep').fadeOut();
+				})
+				//控制底部图片效果
+				$(".show1").mouseenter(function(){
+					console.log(this);
+					$(this).css({"transform":"rotateY(360deg)","transition":"all 1s ease-in"})
+				})
+				$(".show1").mouseleave(function(){
+					$(this).css({"transform":"rotateY(0deg)","transition":"all 1s ease-in"})
+				})
+		</script>
+
+	</body>
+
+</html>

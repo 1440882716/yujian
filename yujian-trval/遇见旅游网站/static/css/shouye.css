@@ -1,0 +1,530 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+/* 这是做适配的 */
+.nav_bigbox{
+	width: 100%;
+	height: 200px;
+	background-color: rgb(48,48,48);
+}
+.nav123{
+	width: 1200px;
+	height: 200px;
+	margin: 0 auto;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	color: rgb(255,157,0);
+}
+.nav1{
+	width: 100%;
+	height: 30px;
+	background-color: rgb(43,43,43);
+	color: white;
+	position: relative;
+}
+.nav1 span a{
+	color: #999;
+	margin-left: 10px;
+	text-decoration: none;
+}
+.nav1 span a:hover{
+	color: rgb(255,157,0);
+}
+.nav1_left{
+	display: inline-block;
+	position: absolute;
+	top: 3px;
+	left: 155px;
+}
+.nav1_right{
+	display: inline-block;
+	position: absolute;
+	top: 3px;
+	right: 300px;
+}
+.nav2{
+	width: 100%;
+	height: 120px;
+	position: relative;
+	background-color: rgb(51,51,51);
+}
+#plist{
+	display: none;
+	/*height: 160px;*/
+	position: absolute;
+	right: 800px;
+	top: 75px;
+	z-index: 999;
+	background-color: white;
+}
+#plist ul{
+	margin-top: 0px;
+	margin-left: 13px;
+}
+#plist li{
+	color: #999;
+	width: 55px;
+	height: 20px;
+	display: block;
+	margin-top: 10px;
+}
+.nav2 .server{
+	width: 100px;
+	height: 80px;
+	/* background-color: lavenderblush; */
+	position: absolute;
+	right: 100px;
+	top: 40px;
+}
+.nav2 .server .p1{
+	color: #999;
+	
+}
+.nav .server .p2{
+	color: rgb(253,208,0);
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+	background-color: lavenderblush;
+}
+.box_log{
+	width: 198px;
+	height: 75px;
+	position: absolute;
+	margin-top: 20px;
+	display: inline-block;
+	background-color: lavender;
+}
+.box_log img{
+	width: 198px;
+	height: 75px;
+}
+.option p a{
+	text-decoration: none;
+	color: rgb(253,208,0);
+}
+.option p{
+	color: rgb(253,208,0);
+	font-size: 18px;
+	position: absolute;
+	right: 800px;
+	top: 48px;
+}
+.triangle{
+	color: white;
+}
+.box_inp{
+	position: absolute;
+	right: 350px;
+	top: 40px;
+}
+input{
+	width: 432px;
+	height: 40px;
+	background-color: rgb(51,51,51);
+	border: 2px solid rgb(253,208,0);
+	color: white;
+	padding-left: 5px;
+	box-sizing: border-box;
+}
+.btn{
+	width: 130px;
+	height: 40px;
+	border: 0px;
+	position: absolute;
+	right: 222px;
+	top: 40px;
+	background-color: rgb(253,208,0);
+}
+.inp{
+	width: 435px;
+	height: 40px;
+	display: inline-block;
+	
+}
+.nav3{
+	width: 100%;
+	height: 50px;
+	position: relative;
+	background-color: rgb(31,31,31);
+}
+.a_right_top_ul{
+	display: flex;
+	list-style-type: none;
+}
+.a_right_top_ul li{
+	color: white;
+	
+	width: 100px;
+	height: 50px;
+	text-align: center;
+	/* display: inline; */
+	/* margin-left: 20px; */
+	line-height: 50px;
+}
+#nav3_list{
+	height: 50px;
+}
+#nav3_list a{
+	text-decoration: none;
+	color: rgb(255,255,255);
+}
+#nav3_list a:hover{
+	color: rgb(255,157,0);
+}
+.nav3 #nav3_list .list{
+	display: flex;
+	height: 50px;
+	line-height: 50px;
+	justify-content: space-between;
+	list-style: none;
+	text-align: center;
+	/* margin-top: 20px; */
+	/* margin-left: 100px !important; */
+}
+.information{
+	width: 100%;
+	height: 30px;
+	color: brown;
+}
+.information .roll{
+	width: 100%;
+	height: 100%;
+	background-color: lavender;
+	text-align: center;
+	line-height: 30px;
+}
+.bigbox{
+	/* height: 200px; */
+	height: 1300px;
+	background-color: rgb(240,240,240);
+}
+.m_left{
+	float: left;
+	display: inline-block;
+	width: 20%;
+	height: 420px;
+	/* background-color: lightblue; */
+}
+.m_left_top{
+	width: 100%;
+	height: 50px;
+	/* background-color: darkcyan; */
+}
+.m_left_top a{
+	color: #666;
+	font-size: 20px;
+	text-align: center;
+	font-weight: 500;
+	line-height: 50px;
+	text-decoration: none;
+}
+.m_left_top a:hover{
+	color: rgb(255,157,0);
+}
+.m_left_top p{
+	text-align: center;
+	line-height: 50px;
+}
+.m_left_foot{
+	width: 100%;
+	height: 370px;
+	background-color: darkgoldenrod;
+}
+.m_right {
+	margin-left: 1%;
+	float: left;
+	width: 79%;
+	height: 370px;
+	display: inline-block;
+	/* background-color: lightcoral; */
+}
+.m_right_top{
+	width: 100%;
+	height: 50px;
+	/* background-color: darkcyan; */
+}
+.m_right_top p{
+	display: inline-block;
+	color: #666;
+	font-size: 20px;
+	line-height: 50px;
+	font-weight: 500;
+}
+.m_right_top .span_a{
+	/* width: 700px; */
+	height: 40px;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 378px;
+}
+.m_right_top a{
+	color: #999;
+	text-decoration: none;
+	margin-left: 7px;
+}
+.m_right_top a:hover{
+	color: rgb(255,157,0);
+}
+.m_right_foot{
+	width: 100%;
+	height: 370px;
+	/* background-color: darkgoldenrod; */
+}
+.m_right ul{
+	display: inline-block;
+	list-style-type: none;
+}
+.distence0:hover .point{
+	display: inline-block!important;
+}
+.m_right ul li{
+	width: 141px;
+	height: 180px;
+	float: left;
+	margin-left: 10px;
+}
+.m_right ul li img{
+	width: 100%;
+	height: 100%;
+}
+.m_right ul .distence2 {
+	margin-left: 0px;
+}
+.m_right ul .distence3 {
+	margin-top: 5px;
+}
+
+.m_right ul li .distence{
+	margin-left: 5px;
+}
+/* 特惠路线 */
+.root_top{
+	width: 100%;
+	height: 60px;
+	/* background-color: skyblue; */
+}
+.root_top .root_top_ul{
+	width: 500px;
+	height: 60px;
+	display: flex;
+	list-style: none;
+	font-size: 16px;
+	color: #999;
+	justify-content: space-between;
+}
+.root_top .root_top_ul li{
+	
+}
+.root_top_ul a{
+	text-decoration: none;
+	line-height: 60px;
+	color: #999;
+}
+.root_top_ul a:hover{
+	text-decoration: none;
+	color: rgb(255,157,0);
+}
+/* 类似的手风琴效果 */
+.root_foot{
+	width: 100%;
+	height: 304px;
+	/* background-color: orange; */
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.root_foot img{
+	width: 528px;
+	height: 304px;
+}
+.root_foot .slide {
+	width: 153px;
+	float: left;
+	cursor: pointer;
+	transition: 1.5s;
+}
+
+.root_foot .on {
+	width: 528px;
+}
+
+/* 周边短途游 */
+.around{
+	width: 100%;
+	height: 450px;
+	/* background-color: hotpink; */
+}
+.a_left{
+	width: 20%;
+	height: 450px;
+	display: inline-block;
+	float: left;
+	/* background-color: red; */
+}
+.a_left_top{
+	width: 100%;
+	height: 50px;
+	display: inline-block;
+	/* background-color: red; */
+}
+.a_left_top a{
+	color: #999;
+	font-size: 18px;
+	/* text-align: center; */
+	text-decoration: none;
+	line-height: 50px;
+	margin-left: 7px;
+}
+.a_left_top a:hover{
+	color: rgb(255,157,0);
+}
+.a_left_foot{
+	width: 100%;
+	/*height: 580px;*/
+	display: inline-block;
+	background-color: white; 
+}
+.a_right {
+	float: left;
+	width: 80%;
+	height: 450px;
+}
+.a_right_top{
+	display: inline-block;
+	width: 100%;
+	height: 50px;
+	/* background-color: black; */
+}
+.a_right_top a{
+	color: #999;
+	text-decoration: none;
+}
+.a_right_top a:hover{
+	color: rgb(255,157,0);
+}
+.a_right_foot{
+	display: flex;
+	width: 100%;
+	height: 580px;
+	/* background-color: yellow; */
+}
+
+.a_right_foot1{
+	display: inline-block;
+	margin-left: 7px;
+	width: 482px;
+	height: 226px;
+	position: relative;
+	background-color: deeppink;
+}
+.massege1{
+	/* display: none; */
+	width: 482px;
+	height: 50px;
+	color: black;
+	background-color: rgba(220,220,220,0.5);
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+}
+.a_right_foot2{
+	display: inline-block;
+	margin-left: 4px;
+	width: 237px;
+	height: 226px;
+	background-color: deeppink;
+}
+
+.one{
+	width: 237px;
+	height: 136px;
+	display: inline-block;
+	margin-left: 5px;
+}
+.one p{
+	width: 237px;
+	background-color: white;
+}
+.right_lunbo{
+	width: 344px;
+	height: 430px;
+	/* background-color: #006400; */
+}
+.right_lunbo img{
+	width: 172px;
+	height: 422px;
+} 
+/* 底部 */
+.footbox{
+	width: 100%;
+}
+.footer_box{
+	width: 1200px;
+	margin: 0 auto;
+}
+.footer1{
+	width: 100%;
+	height: 130px;
+	background-color: rgb(255,255,255);
+}
+.footer1 ul{
+	display: flex;
+	list-style-type: none;
+	margin-left: 0px;
+	margin-top: 30px;
+}
+.footer1 ul li{
+	display: inline-block;
+	margin-left: 130px;
+	flex: 1;
+}
+.footer1 ul li p{
+	color: black;
+	font-size: 24px;
+	margin-top: 5px;
+}
+/* 底部导航栏 */
+.footer {
+	width: 100%;
+    height: auto;
+	background-color: #3c3c3c;
+	padding: 80px 0px;
+
+}
+.footer .container {
+	position: relative;
+	width: 1200px;
+	margin: 0 auto;
+}
+.footer a {
+	color: #b0b0b0;
+	margin: 0 3px;
+}
+.footer a:hover {
+	color: #fff;
+}
+.footer p {
+	font-size: 14px;
+	color: #b0b0b0;
+	margin-top: 12px;
+}
+.footer span {
+	font-size: 12px;
+	color: #b0b0b0;
+}
+.footer span::after {
+	content: "|";
+    margin-left: 7px;
+}
+.footer div img {
+	width: 130px;
+	height: 130px;
+	position: absolute;
+	top: 0px;
+	right: 60px;
+	border-radius: 50%;
+}

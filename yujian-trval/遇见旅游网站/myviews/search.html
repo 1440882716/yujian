@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap.css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="/css/search.css" />
+		<title>遇见-和你的不期而遇</title>
+	</head>
+
+	<body>
+		<div class="nav_bigbox">
+			<div class="nav123">
+				<!-- 登陆注册条 -->
+				<div class="nav1">
+					<div class="nav1_left">
+						<% if(result0==""){ %>
+							<span class="first"><a class='login' href="/page1/login">登录</a></span>
+							<span><a class='regist' href="/page1/regist">注册账号</a></span>
+						<% } %>
+						
+						<%if(result0=="get"){%>
+							<span style="color: #999;" class="second">欢迎您 </span><span style="color: #999;" class="first"><%= result%></span>
+							<span><a class='regist' href="/page1/regist">注册账号</a></span>
+						<%}%>
+					</div>
+					<div class="nav1_right">
+						<span><a href="#">帮助中心</a></span>
+						<span><a href="#">遇见旅途</a></span>
+						<span><a href="#">手机APP</a></span>
+					</div>
+				</div>
+
+				<div class="nav2">
+					<div class="container">
+						<div class="box_log">
+							<a href="/first"><img src="/img/logo.jpg"></a>
+						</div>
+						<!-- 坐标下拉菜单 -->
+						<div class="option">
+							<p id="choose">
+								<a class="c_text" href="#">成都站</a>
+								<span class="glyphicon glyphicon-menu-down triangle"></span>
+								<div id="plist">
+									<ul>
+										<li>上海站</li>
+										<li>杭州站</li>
+										<li>广州站</li>
+										<li>武汉站</li>
+										<li>深圳站</li>
+										<li>厦门站</li>
+										<li>重庆站</li>
+									</ul>
+								</div>
+
+							</p>
+						</div>
+
+						<form action="/page1/search" method="get">
+							<div class="box_inp">
+								<input type="text" name="place" placeholder="成都" value="" />
+							</div>
+							<button class="btn" type="submit">搜索</button>
+						</form>
+
+						<div class="server">
+							<p class="p1">服务热线</p>
+							<p class="p1">9:00-21:00-> 400-670-6300</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="nav3">
+					<div id="nav3_list">
+						<ul class="list">
+							<li>
+								<a href="#">综合</a>
+							</li>
+							<li>
+								<a href="#">线路</a>
+							</li>
+							<li>
+								<a href="#">签证</a>
+							</li>
+							<li>
+								<a href="#">游记</a>
+							</li>
+							<li>
+								<a href="#">攻略</a>
+							</li>
+							<li>
+								<a href="#">视频</a>
+							</li>
+							<li>
+								<a href="#">摄影</a>
+							</li>
+							<li>
+								<a href="#">遇见你</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 这是做适配的盒子 -->
+			</div>
+		</div>
+		<!-- 中间部分 -->
+
+		<% if(results[0].class==1){%>
+		<div class="bigbox1">
+			<div class="box1" style="width: 1200px;">
+				<!--city-->
+				<h4><%= results[0].city%></h4>
+				<hr />
+				<div class="city" style="width: 100%">
+					<div class="img" style="width: 20%;float: left;">
+						<img src="/img/search1.jpg" style="width: 100%;" />
+					</div>
+					<p class="text" style="width: 75%;float: left;margin-left: 20px;text-indent:2em;">
+						<%= results[0].info%>
+					</p>
+					<div id="" style="clear: both;"></div>
+				</div><br />
+				<!--路线-->
+				<h4>路线</h4>
+				<hr />
+				<style type="text/css">
+					.you1 {
+						display: inline-block;
+						flex: 1;
+						width: 100px;
+						height: 30px;
+						border-radius: 15px;
+						border: 1px solid black;
+						text-align: center;
+						line-height: 30px;
+						border-color: #CCCCCC;
+						margin-left: 20px;
+					}
+					.you1:hover {
+						background-color: rgb(255,154,0);
+					}
+				</style>
+				<ul class="you" style="list-style-type: none;cursor: pointer;">
+					<li class="you1">深度游</li>
+					<li class="you1">户外游</li>
+					<li class="you1">摄影游</li>
+					<li class="you1">亲子游</li>
+					<li class="you1">当地玩乐</li>
+					<li class="you1">大型活动</li>
+				</ul>
+
+				<style type="text/css">
+					.hover:hover {
+						color: rgb(255, 154, 0);
+					}
+				</style>
+
+				<!--1-->
+				<!--<a href="" style="color: black;">-->
+				<div class="city1 num" style="width: 100%;margin-top: 20px;cursor: pointer;">
+					<div class="img" style="width: 20%;float: left;">
+						<img src="/img/search2.jpeg" style="width: 100%" />
+					</div>
+					<div class="text" style="width: 75%;float: left;margin-left: 20px;font-size: 16px;">
+						<span class="hover"><%= results[1].info%></span>
+						<br />
+						<span id="" style="margin-top: 55px;display: inline-block;font-size: 12px;">
+							行程天数：1天 <span id="" style="margin-left: 20px;">
+								234人已报名
+							</span>
+						</span>
+						<span id="" style="color: white;font-family: '微软雅黑';line-height: 30px;text-align: center;margin-left: 450px;display: inline-block;width: 120px;height: 30px;background-color: rgb(255,154,0);">
+							￥<span style="font-size: 20px;font-weight: 600;"><%= results[1].price%></span>元起
+						</span>
+					</div>
+					<div id="" style="clear: both;"></div>
+				</div>
+				<!--</a>-->
+				
+				<!--2-->
+				<div class="city2 num" style="width: 100%;margin-top: 20px;cursor: pointer;">
+					<div class="img" style="width: 20%;float: left;">
+						<img src="/img/search3.jpg" style="width: 100%" />
+					</div>
+					<div class="text" style="width: 75%;float: left;margin-left: 20px;font-size: 16px;">
+						<span class="hover"><%= results[2].info%></span>
+						<br />
+						<span id="" style="margin-top: 55px;display: inline-block;font-size: 12px;">
+							行程天数：1天 <span id="" style="margin-left: 20px;">
+								234人已报名
+							</span>
+						</span>
+						<span id="" style="color: white;font-family: '微软雅黑';line-height: 30px;text-align: center;margin-left: 450px;display: inline-block;width: 120px;height: 30px;background-color: rgb(255,154,0);">
+							￥<span style="font-size: 20px;font-weight: 600;"><%= results[2].price%></span>元起
+						</span>
+					</div>
+					<div id="" style="clear: both;"></div>
+				</div>
+				<!--3-->
+				<div class="city3 num" style="width: 100%;margin-top: 20px;cursor: pointer;">
+					<div class="img" style="width: 20%;float: left;">
+						<img src="/img/search4.jpg" style="width: 100%" />
+					</div>
+					<div class="text" style="width: 75%;float: left;margin-left: 20px;font-size: 16px;">
+						<span class="hover"><%= results[3].info%></span>
+						<br />
+						<span id="" style="margin-top: 55px;display: inline-block;font-size: 12px;">
+							行程天数：1天 <span id="" style="margin-left: 20px;">
+								234人已报名
+							</span>
+						</span>
+						<span id="" style="color: white;font-family: '微软雅黑';line-height: 30px;text-align: center;margin-left: 450px;display: inline-block;width: 120px;height: 30px;background-color: rgb(255,154,0);">
+							￥<span style="font-size: 20px;font-weight: 600;"><%= results[3].price%></span>元起
+						</span>
+					</div>
+					<div id="" style="clear: both;"></div>
+				</div>
+
+				<!--4-->
+				<div class="city4 num" style="width: 100%;margin-top: 20px;cursor: pointer;">
+					<div class="img" style="width: 20%;float: left;">
+						<img src="/img/search5.jpg" style="width: 100%" />
+					</div>
+					<div class="text" style="width: 75%;float: left;margin-left: 20px;font-size: 16px;">
+						<span class="hover"><%= results[4].info%></span>
+						<br />
+						<span id="" style="margin-top: 55px;display: inline-block;font-size: 12px;">
+							行程天数：1天 <span id="" style="margin-left: 20px;">
+								234人已报名
+							</span>
+						</span>
+						<span id="" style="color: white;font-family: '微软雅黑';line-height: 30px;text-align: center;margin-left: 450px;display: inline-block;width: 120px;height: 30px;background-color: rgb(255,154,0);">
+							￥<span style="font-size: 20px;font-weight: 600;"><%= results[4].price%></span>元起
+						</span>
+					</div>
+					<div id="" style="clear: both;"></div>
+				</div>
+
+				<div id="" style="height: 120px;">
+
+				</div>
+
+			</div>
+		</div>
+		<%}%>
+		<% if(results[0].class==2){%> 
+			<div class="bigbox1">
+			<div class="box1" style="width: 1200px;">
+				<!--city-->
+				<h4><%= results[0].city%></h4>
+				<hr />
+				<div class="city" style="width: 100%">
+					<div class="img" style="width: 20%;float: left;">
+						<img src="/img/gsearch1.jpg" style="width: 100%;"/>
+					</div>
+					<p class="text" style="width: 75%;float: left;margin-left: 20px;text-indent:2em;">
+						<%= results[0].info%>
+					</p>
+					<div id="" style="clear: both;"></div>
+				</div><br />
+				<!--路线-->
+				<h4>路线</h4>
+				<hr />
+				<style type="text/css">
+					.you1 {
+						display: inline-block;
+						flex: 1;
+						width: 100px;
+						height: 30px;
+						border-radius: 15px;
+						border: 1px solid black;
+						text-align: center;
+						line-height: 30px;
+						border-color: #CCCCCC;
+						margin-left: 20px;
+					}
+					.you1:hover {
+						background-color: rgb(255,154,0);
+					}
+				</style>
+				<ul class="you" style="list-style-type: none;cursor: pointer;">
+					<li class="you1">深度游</li>
+					<li class="you1">户外游</li>
+					<li class="you1">摄影游</li>
+					<li class="you1">亲子游</li>
+					<li class="you1">当地玩乐</li>
+					<li class="you1">大型活动</li>
+				</ul>
+				
+				<style type="text/css">
+					.hover:hover {
+						color: rgb(255,154,0);
+					}
+					
+				</style>
+				
+				<!--1-->
+				<!--<a href="" style="color: black;>-->
+				<div class="city1 num" style="width: 100%;margin-top: 20px;cursor: pointer;">
+					<div class="img" style="width: 20%;float: left;">
+						<img src="/img/gsearch2.jpg" style="width: 100%"/>
+					</div>
+					<div class="text" style="width: 75%;float: left;margin-left: 20px;font-size: 16px;">
+						<span class="hover"><%= results[1].info%></span>
+						<br />
+						<span id="" style="margin-top: 55px;display: inline-block;font-size: 12px;">
+							行程天数：1天 <span id="" style="margin-left: 20px;">
+								234人已报名
+							</span>
+						</span>
+						<span id="" style="color: white;font-family: '微软雅黑';line-height: 30px;text-align: center;margin-left: 450px;display: inline-block;width: 120px;height: 30px;background-color: rgb(255,154,0);">
+							￥<span style="font-size: 20px;font-weight: 600;"><%= results[1].price%></span>元起
+						</span>
+					</div>
+					<div id="" style="clear: both;"></div>
+				</div>
+				<!--</a>-->
+				
+				
+				<!--2-->
+				<div class="city2 num" style="width: 100%;margin-top: 20px;cursor: pointer;">
+					<div class="img" style="width: 20%;float: left;">
+						<img src="/img/gsearch3.jpg" style="width: 100%"/>
+					</div>
+					<div class="text" style="width: 75%;float: left;margin-left: 20px;font-size: 16px;">
+						<span class="hover"><%= results[2].info%></span>
+						<br />
+						<span id="" style="margin-top: 55px;display: inline-block;font-size: 12px;">
+							行程天数：1天 <span id="" style="margin-left: 20px;">
+								234人已报名
+							</span>
+						</span>
+						<span id="" style="color: white;font-family: '微软雅黑';line-height: 30px;text-align: center;margin-left: 450px;display: inline-block;width: 120px;height: 30px;background-color: rgb(255,154,0);">
+							￥<span style="font-size: 20px;font-weight: 600;"><%= results[2].price%></span>元起
+						</span>
+					</div>
+					<div id="" style="clear: both;"></div>
+				</div>
+				<!--3-->
+				<div class="city3 num" style="width: 100%;margin-top: 20px;cursor: pointer;">
+					<div class="img" style="width: 20%;float: left;">
+						<img src="/img/gsearch4.jpg" style="width: 100%"/>
+					</div>
+					<div class="text" style="width: 75%;float: left;margin-left: 20px;font-size: 16px;">
+						<span class="hover"><%= results[3].info%></span>
+						<br />
+						<span id="" style="margin-top: 55px;display: inline-block;font-size: 12px;">
+							行程天数：1天 <span id="" style="margin-left: 20px;">
+								234人已报名
+							</span>
+						</span>
+						<span id="" style="color: white;font-family: '微软雅黑';line-height: 30px;text-align: center;margin-left: 450px;display: inline-block;width: 120px;height: 30px;background-color: rgb(255,154,0);">
+							￥<span style="font-size: 20px;font-weight: 600;"><%= results[3].price%></span>元起
+						</span>
+					</div>
+					<div id="" style="clear: both;"></div>
+				</div>
+				
+				<!--4-->
+				<div class="city4 num" style="width: 100%;margin-top: 20px;cursor: pointer;">
+					<div class="img" style="width: 20%;float: left;">
+						<img src="/img/gsearch5.jpg" style="width: 100%"/>
+					</div>
+					<div class="text" style="width: 75%;float: left;margin-left: 20px;font-size: 16px;">
+						<span class="hover"><%= results[4].info%></span>
+						<br />
+						<span id="" style="margin-top: 55px;display: inline-block;font-size: 12px;">
+							行程天数：1天 <span id="" style="margin-left: 20px;">
+								234人已报名
+							</span>
+						</span>
+						<span id="" style="color: white;font-family: '微软雅黑';line-height: 30px;text-align: center;margin-left: 450px;display: inline-block;width: 120px;height: 30px;background-color: rgb(255,154,0);">
+							￥<span style="font-size: 20px;font-weight: 600;"><%= results[4].price%></span>元起
+						</span>
+					</div>
+					<div id="" style="clear: both;"></div>
+				</div>
+				
+				<div id="" style="height: 120px;">
+					
+				</div>
+				
+			</div>
+		</div>
+		<%}%>
+		<% if(results[0].class==3){%> 
+			<div class="bigbox1">
+			<div class="box1" style="width: 1200px;">
+				<!--city-->
+				<h4><%= results[0].city%></h4>
+				<hr />
+				<div class="city" style="width: 100%">
+					<div class="img" style="width: 20%;float: left;">
+						<img src="/img/hsearch1.jpg" style="width: 100%;"/>
+					</div>
+					<p class="text" style="width: 75%;float: left;margin-left: 20px;text-indent:2em;">
+						<%= results[0].info%>
+					</p>
+					<div id="" style="clear: both;"></div>
+				</div><br />
+				<!--路线-->
+				<h4>路线</h4>
+				<hr />
+				<style type="text/css">
+					.you1 {
+						display: inline-block;
+						flex: 1;
+						width: 100px;
+						height: 30px;
+						border-radius: 15px;
+						border: 1px solid black;
+						text-align: center;
+						line-height: 30px;
+						border-color: #CCCCCC;
+						margin-left: 20px;
+					}
+					.you1:hover {
+						background-color: rgb(255,154,0);
+					}
+				</style>
+				<ul class="you" style="list-style-type: none;cursor: pointer;">
+					<li class="you1">深度游</li>
+					<li class="you1">户外游</li>
+					<li class="you1">摄影游</li>
+					<li class="you1">亲子游</li>
+					<li class="you1">当地玩乐</li>
+					<li class="you1">大型活动</li>
+				</ul>
+				
+				<style type="text/css">
+					.hover:hover {
+						color: rgb(255,154,0);
+					}
+					
+				</style>
+				
+				<!--1-->
+				<!--<a href="" style="color: black;>-->
+				<div class="city1 num" style="width: 100%;margin-top: 20px;cursor: pointer;">
+					<div class="img" style="width: 20%;float: left;">
+						<img src="/img/hsearch2.jpg" style="width: 100%"/>
+					</div>
+					<div class="text" style="width: 75%;float: left;margin-left: 20px;font-size: 16px;">
+						<span class="hover"><%= results[1].info%></span>
+						<br />
+						<span id="" style="margin-top: 55px;display: inline-block;font-size: 12px;">
+							行程天数：1天 <span id="" style="margin-left: 20px;">
+								234人已报名
+							</span>
+						</span>
+						<span id="" style="color: white;font-family: '微软雅黑';line-height: 30px;text-align: center;margin-left: 450px;display: inline-block;width: 120px;height: 30px;background-color: rgb(255,154,0);">
+							￥<span style="font-size: 20px;font-weight: 600;"><%= results[1].price%></span>元起
+						</span>
+					</div>
+					<div id="" style="clear: both;"></div>
+				</div>
+				<!--</a>-->
+				
+				
+				<!--2-->
+				<div class="city2 num" style="width: 100%;margin-top: 20px;cursor: pointer;">
+					<div class="img" style="width: 20%;float: left;">
+						<img src="/img/hsearch3.jpg" style="width: 100%"/>
+					</div>
+					<div class="text" style="width: 75%;float: left;margin-left: 20px;font-size: 16px;">
+						<span class="hover"><%= results[2].info%></span>
+						<br />
+						<span id="" style="margin-top: 55px;display: inline-block;font-size: 12px;">
+							行程天数：1天 <span id="" style="margin-left: 20px;">
+								234人已报名
+							</span>
+						</span>
+						<span id="" style="color: white;font-family: '微软雅黑';line-height: 30px;text-align: center;margin-left: 450px;display: inline-block;width: 120px;height: 30px;background-color: rgb(255,154,0);">
+							￥<span style="font-size: 20px;font-weight: 600;"><%= results[2].price%></span>元起
+						</span>
+					</div>
+					<div id="" style="clear: both;"></div>
+				</div>
+				<!--3-->
+				<div class="city3 num" style="width: 100%;margin-top: 20px;cursor: pointer;">
+					<div class="img" style="width: 20%;float: left;">
+						<img src="/img/hsearch4.jpg" style="width: 100%"/>
+					</div>
+					<div class="text" style="width: 75%;float: left;margin-left: 20px;font-size: 16px;">
+						<span class="hover"><%= results[3].info%></span>
+						<br />
+						<span id="" style="margin-top: 55px;display: inline-block;font-size: 12px;">
+							行程天数：1天 <span id="" style="margin-left: 20px;">
+								234人已报名
+							</span>
+						</span>
+						<span id="" style="color: white;font-family: '微软雅黑';line-height: 30px;text-align: center;margin-left: 450px;display: inline-block;width: 120px;height: 30px;background-color: rgb(255,154,0);">
+							￥<span style="font-size: 20px;font-weight: 600;"><%= results[3].price%></span>元起
+						</span>
+					</div>
+					<div id="" style="clear: both;"></div>
+				</div>
+				
+				<!--4-->
+				<div class="city4 num" style="width: 100%;margin-top: 20px;cursor: pointer;">
+					<div class="img" style="width: 20%;float: left;">
+						<img src="/img/hsearch5.jpg" style="width: 100%"/>
+					</div>
+					<div class="text" style="width: 75%;float: left;margin-left: 20px;font-size: 16px;">
+						<span class="hover"><%= results[4].info%></span>
+						<br />
+						<span id="" style="margin-top: 55px;display: inline-block;font-size: 12px;">
+							行程天数：1天 <span id="" style="margin-left: 20px;">
+								234人已报名
+							</span>
+						</span>
+						<span id="" style="color: white;font-family: '微软雅黑';line-height: 30px;text-align: center;margin-left: 450px;display: inline-block;width: 120px;height: 30px;background-color: rgb(255,154,0);">
+							￥<span style="font-size: 20px;font-weight: 600;"><%= results[4].price%></span>元起
+						</span>
+					</div>
+					<div id="" style="clear: both;"></div>
+				</div>
+				
+				<div id="" style="height: 120px;">
+					
+				</div>
+				
+			</div>
+		</div>
+		<%}%>
+
+		<!-- 中间部分结束 -->
+		<!-- 底部 -->
+		<footer class="footer">
+			<div class="container">
+				<p>
+					<a href="#">关于遇见</a>
+					<a href="#">遇见的故事</a>
+					<a href="#">联系遇见</a>
+					<a href="#">遇见招聘</a>
+					<a href="#">意见反馈</a>
+					<a href="#">使用协议</a>
+					<a href="#">隐私政策</a>
+					<a href="#">交换链接</a>
+					<a href="#">帮助中心</a>
+					<a href="#">网站地图</a>
+				</p>
+				<p>
+					<span>川ICP备 09011712 号-1</span>
+					<span>川公网安备 33010602002105号</span>
+					<span>营业执照</span>
+					<span>四川游侠客国际旅行社有限公司</span>
+					<span>成都途游电子商务有限公司</span>
+					<span>许可证编号：L-ZJ-CJ00161</span>
+				</p>
+				<p>
+					© yujian.com 版权所有法律顾问：四川四海方圆律师事务所 傅林放 成都市旅游投诉电话：0571-96123 投诉及紧急事件联系电话：152 8355 8411转5
+				</p>
+				<p>
+					旅游预订电话(免长途费)：152 8355 8411，公司地址：成都市武侯区科华北路57号6楼，投诉建议邮箱：jianyi@yujian.com
+				</p>
+				<div>
+					<img src="/img/logo1.png" />
+				</div>
+			</div>
+		</footer>
+		<script src="/js/search.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

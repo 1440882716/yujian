@@ -1,0 +1,402 @@
+* {
+	margin: 0;
+	padding: 0;
+
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+/* 个人中心 */
+/* 标题 */
+.header {
+	width: 100%;
+	height: 70px;
+	
+	background-color: #333;
+	font-size: 13px;
+}
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	font-size: 16px;
+	color: #fff;
+	cursor: pointer;
+}
+.active {
+	color: #fb0;
+}
+img {
+	vertical-align: middle;
+}
+.container {
+	position: relative;
+	width: 1200px;
+}
+
+.header img {
+	width: 180px;
+	height: 68px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.header .nav {
+	display: flex;
+	margin-left: 200px;
+}
+.header .nav li {
+	width: 70px;
+	height: 75px;
+	text-align: center;
+	line-height: 75px;
+	color: #fff;
+}
+
+.header .nav .active a{
+	color: #fb0;
+}
+.header .nav .lvyou:hover {
+	color: #fb0;
+	
+}
+.header ul li div {
+	width: 7px;
+	height: 4px;
+	background: url(../img/xiasanjiao.png); 
+	display: inline-block;
+}
+
+.header .xialakuang {
+	width: 100px;
+	height: 300px;
+	background-color: #fff;
+	position: absolute;
+	top: 70px;
+	left: 750px;
+	display: none;
+	
+}
+.header .xialakuang li {
+	width: 100px;
+	height: 25px;
+	text-align: center;
+	line-height: 25px;
+	margin-top: 10px;
+
+}
+.header .xialakuang li a {
+	color: #333;
+	font-size: 12px;
+}
+.header .xialakuang li a:hover {
+	color: #fb0;
+} 
+.header .center {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.header .center button {
+	width: 60px;
+	height: 23px;
+	line-height: 23px;
+	background-color: #fb0;
+	border: 1px solid #fb0;
+	border-radius: 8%;
+}
+.header .center li {
+	margin-left: 40px;
+	width: 60px;
+	height: 70px;
+	line-height: 70px;
+	float: left;
+	color: #fff;
+}
+.header .center .touxiang {
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	background: url(../img/logo2.jpg);
+	display: inline-block;
+}
+.header .center .last {
+	margin-bottom: 20px;
+	margin-left: 5px;
+}
+
+.header .center .c-last{
+	margin-top: 15px;
+}
+
+
+
+
+
+
+.box {
+	width: 100%;
+	height: 356px;
+	background: url(../img/homeDefaultTop.png);
+}
+.navbox {
+	width: 100%;
+
+}
+.navbox ul {
+	width: 800px;
+	margin: 0 auto;
+	display: flex;
+	padding-left: 100px;
+}
+.navbox ul li {
+	width: 120px;
+	height: 52px;
+	margin-left: 60px;
+	text-align: center;
+	line-height: 52px;
+}
+
+
+/* 中间内容部分 */
+.majorbox {
+	width: 100%;
+	height: auto;
+	background-color: #f2f3f5;
+}
+.majorbox .container {
+	width: 1000px;
+	display: flex;
+}
+.majorbox .left {
+	width: 258px;
+    margin-top: 2px;
+    position: relative;
+}
+.majorbox .left .user_txt {
+	width: 142px;
+    height: 142px;
+    position: absolute;
+    left: 50%;
+    top: -152px;
+    margin-left: -76px;
+    z-index: 1;
+}
+.majorbox .left .user_txt img {
+	width: 142px;
+	height: 142px;
+	border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #eee;
+}
+.majorbox .left .info {
+	padding: 20px 20px;
+	background-color: #fff;
+}
+.majorbox .left li {
+	margin: 25px 35px;
+	font-size: 14px;
+}
+.majorbox .left .info .username {
+	font-size: 18px;
+	font-weight: 900;
+	color: coral;
+	font-family: "华文行楷";
+}
+
+.majorbox .left .info span {
+	color: orange;
+}
+.majorbox .left .info .huiyuan {
+	border-radius: 20%;
+	padding: 3px 3px;
+	color: #fff;
+	background-color: #999;
+}
+.majorbox .left .info button {
+	width: 50px;
+	height: 30px;
+	background-color: #fb0;
+	border: 1px solid #fb0;
+	border-radius: 5%;
+	margin-right: 20px;
+}
+
+
+
+
+.majorbox .right {
+	width: 722px;
+}
+.majorbox .right .r_nav {
+	display: flex;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding: 0px 30px;
+}
+.majorbox .right .r_nav li {
+	width: 360px;
+    height: 90px;
+    line-height: 90px;
+	text-align: center;
+	background-color: #fff;
+}
+.majorbox .right .r_nav .bor-l {
+	border-left: 1px solid #ddd;
+}
+.majorbox .right .r_youji {
+	margin: 0 auto;
+	margin-top: 20px;
+	padding: 0px 30px;
+}
+.majorbox .right .r_youji h4 {
+	color: #555;
+	background-color: #fff;
+}
+.majorbox .right .r_youji div {
+	 width: 624px;
+	 margin: 0 auto;
+	 margin-top: 20px;
+	 padding: 0px 20px;
+	 background-color: #fff;
+ }
+ .majorbox .right .r_youji img {
+	width: 624px; 
+	margin: 20px 0px;
+
+ }
+ .majorbox .right .txt {
+	 width: 600px !important;
+ 	height: 50px;
+ 	overflow: hidden;
+ 	margin-top: 10px;
+ 	font-size: 14px;
+ }
+.majorbox .right .pl {
+ 	border: 1px solid #f0f0f0;
+ 	width: 560px !important;
+ 	height: 40px;
+ 	margin: 20px 0px;
+ 	
+ }
+.majorbox .right .pl li {
+ 	width: 130px;
+ 	height: 40px;
+	display: inline-block;
+ 	text-align: center;
+ 	line-height: 40px;
+ 	font-weight: 500;
+ }
+ .majorbox .right .r_youji  a {
+	color: #333;
+	font-size: 14px;
+ }
+ .majorbox .right .r_youji  a:hover {
+	 font-size: 16px;
+	 font-weight: 800;
+ }
+.majorbox .right .time {
+ 	margin-bottom: 30px;
+ 	width: 600px !important;
+ 	height: 28px;
+ 	line-height: 28px;
+ 	font-size: 12px;
+ 	color: #999;
+ }
+.majorbox .right  .time img {
+ 	width: 20px !important;
+ 	height: 20px;
+ }
+ .majorbox .right .gengduo {
+ 	width: 100%;
+ 	height: 20px;
+ 	margin: 0px 0px 20px 0px !important;
+ 	padding-bottom: 20px !important;
+ }
+ .majorbox .right .gengduo a {
+ 	float: right;
+	color: #333;
+ }
+.majorbox .right .r_xiangce {
+	width: 624px;
+    height: 311px;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding: 0px 20px;
+	background-color: #fff;
+}
+.majorbox .right .r_sheying {
+	width: 624px;
+    height: 311px;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding: 0px 20px;
+	background-color: #fff;
+	margin-bottom: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 底部导航栏 */
+.footer {
+	width: 100%;
+    height: auto;
+	background-color: #3c3c3c;
+	padding: 80px 0px;
+
+}
+.footer .container {
+	position: relative;
+}
+.footer a {
+	color: #b0b0b0;
+	margin: 0 3px;
+}
+.footer a:hover {
+	color: #fff;
+}
+.footer p {
+	font-size: 14px;
+	color: #b0b0b0;
+	margin-top: 12px;
+}
+.footer span {
+	font-size: 12px;
+	color: #b0b0b0;
+}
+.footer span::after {
+	content: "|";
+    margin-left: 7px;
+}
+.footer div img {
+	width: 130px;
+	height: 130px;
+	position: absolute;
+	top: 0px;
+	right: 60px;
+}
